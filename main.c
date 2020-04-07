@@ -8,9 +8,7 @@
 #include <avr/io.h>
 #include <avr/eeprom.h>
 
-const EEMEM unsigned char adres;
-
-long load()
+long load(const EEMEM unsigned char adres)
 {
 	long cztery = eeprom_read_byte(& adres);
 	long trzy = eeprom_read_byte(& adres + 1);
